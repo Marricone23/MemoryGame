@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Inter:wght@400;700&family=Merriweather:wght@700&family=Montserrat:ital,wght@0,300;1,200;1,300&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+
+body { 
+    background: rgb(80, 80, 212);
+    height: 100vh;  
+        
+  }
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.count-container{
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 22px;
+    line-height: 48px;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+color: #fff;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    background: rgb(80, 80, 212);
+    border-radius: 5%;
+}
+
+.game-container{    
+    margin: 0 auto;
+    padding: 50px 210px;  
+    position: relative;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.game-card{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: scale(1);
+    transition: transform .9s;
+}
+
+.game-card:active{
+    transform: scale(.90);
+    transition: transform .7s;
+}
+
+.front-side,
+.back-side{
+    position: absolute;
+    backface-visibility: hidden;   
+   
+}
+.front-side{
+    transform: rotateY(180deg);  
+}
+
+.game-card.rotate{      
+    transform: rotateY(180deg);}
+
+.footer-container{
+    display: inline-flex;
+    justify-content: space-between;  
+    width: 100%;
+    padding: 0 20px;
+}
+
+.footer-data{
+  display: inline-flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 15%;
+  align-items: center;
+  color: #fff;
+}
+
+.play{
+    display: none;
+    height: 250px;
+    width: 500px;
+    margin: 276px 68px;
+    align-items: center;
+    position: absolute;
+    z-index: 666;
+    justify-content: center;
+    background-color: tomato;
+    border-radius: 15px;
+    
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: blue;
+    border: none;
+}
+
+.newGame{
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-rsschool{
+ /* width: 150px;
+  height: 100px;*/
+  display: flex;
+  align-items: center;
+}
+
+.footer-rsschool:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: 0.7s;
+}
+.footer-data:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: 0.7s;
+}
